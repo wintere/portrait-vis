@@ -10,7 +10,7 @@ with open('cambridge-textual-variants.txt', encoding='utf-8') as f:
 
 # Organizes changes by chapter, page (1882), and first line (1882)
 chapter_splits = re.split(r'CHAPTER[\d]+', data)
-changes_header = ["chapter", "page", "line", "1886", "1906", "change_type"]
+changes_header = ["chapter", "page", "line", "1882", "1908", "change_type"]
 c = 
 with open('out.csv', 'w', newline='') as csvfile:
 	writer = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)

@@ -1,7 +1,20 @@
 # portrait-vis
 The intermediate outputs and visualization code for a final project for ENGLISH 590: Quantifying Literature.  
 
-Because Henry James's *The Portrait of a Lady* is in the public domain the only file I have omitted from this repository is the PDF list of textual variants from [this edition of the book](https://www.cambridge.org/core/books/abs/portrait-of-a-lady/textual-variants/043E375660B293FE913A585215206122) because the changelist is supplemented with editorial material under copyright. I extracted the variants from the PDF chapter and converted them to a text file cambridge-textual-variants.txt.
+Because Henry James's *The Portrait of a Lady* is in the public domain the only file I have omitted from this repository is the PDF list of textual variants from [this edition of the book](https://www.cambridge.org/core/books/abs/portrait-of-a-lady/textual-variants/043E375660B293FE913A585215206122) because the changelist is supplemented with editorial material under copyright. I extracted the variants from the PDF chapter and converted them to a text file cambridge-textual-variants.txt
+
+# File List
+
+**Input Documents**
+
+[**Portrait 1882 Copy Text**](https://github.com/wintere/portrait-vis/blob/main/raw-portrait-1881-copy.txt)
+
+[**Portrait 1882 Copy Text With Page Numbers Removed**](https://github.com/wintere/portrait-vis/blob/main/raw-portrait-1881-copy-no-pagenums.txt)
+
+[**Portrait NYE Text With Preface and Page Numbers Removed**](https://github.com/wintere/portrait-vis/blob/main/raw-portrait-1908-nye-no-preface.txt)
+
+
+# Pipeline
 
 ## Data Cleaning
 

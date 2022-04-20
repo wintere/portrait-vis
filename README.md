@@ -5,7 +5,7 @@ Because Henry James's *The Portrait of a Lady* is in the public domain the only 
 
 ## Data Cleaning
 
-*Data cleaning that can consume infinite time.*
+*Data cleaning is a vortex that can consume infinite time.*
 
 ## The Bag of Words Model
 
@@ -29,6 +29,9 @@ Usage:
 ```
 python3 bag_of_words_unstandardized.py
 ```
+The script opens the provided versions of the 
+
+This approach has some obvious problems. It doesn't show which words were replaced with which words: ie. turning "eyes" to "eye" would not be considered particularly significant. While it's 
 
 ## Attempt #2: processing changes on the word level, contextualized *within* a change
 

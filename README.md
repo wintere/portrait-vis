@@ -42,7 +42,7 @@ Usage:
 ```
 python3 bag_of_words_unstandardized.py
 ```
-The script opens the provided versions of the 
+The script compares the language of the two versions of the novel and generates two lists.
 
 This approach has some obvious problems. It doesn't show which words were replaced with which words: ie. turning "eyes" to "eye" would not be considered particularly significant but "foot" to "eye" would be. 
 

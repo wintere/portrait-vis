@@ -39,6 +39,8 @@ for token in y:
 	'PRP$', 'UH', 'RBS', 'NNPS', '$', 'JJR', 'VBP', 'WP$', 'VB']:
 		nye_words.add(token[0].lower().rstrip('-.?[]'))
 
+#Write results to output directory
+
 # Alphabetized ords introduced in NYE (unstandardized), one word per line
 with open('words_added_to_nye.txt', mode='w') as io:
 	for item in sorted(list(nye_words - ct_words)):

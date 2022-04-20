@@ -44,7 +44,9 @@ python3 bag_of_words_unstandardized.py
 ```
 The script opens the provided versions of the 
 
-This approach has some obvious problems. It doesn't show which words were replaced with which words: ie. turning "eyes" to "eye" would not be considered particularly significant. While it's 
+This approach has some obvious problems. It doesn't show which words were replaced with which words: ie. turning "eyes" to "eye" would not be considered particularly significant but "foot" to "eye" would be. 
+
+However, one can observe the addition of a handful of the French words Anesko and Horne dreaded, as well as the alteration of character ages.
 
 ## Attempt #2: processing changes on the word level, contextualized *within* a change
 

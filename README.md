@@ -55,3 +55,11 @@ Usage:
 ```
 python3 bag_of_words_unstandardized.py
 ```
+
+I was inspired by Richard Brath's Textual Stem and Leaf plots, which tracked associations between adjectives and characters. However, I wasn't interested in analyzing adjective proximity to character (as interesting as that would be if it was easy to do computationally) but instead adjective proximity to replacement adjectives. 
+
+I sketched out what I imagined my ideal visualization would like below.
+![image](https://user-images.githubusercontent.com/7553742/164342464-4171778c-0e67-484d-ba0f-9be88c0d7d8a.png)
+
+To generate the input data, I needed word:nearby replacement pairs. Using the data I'd already cleane
+

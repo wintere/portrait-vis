@@ -13,12 +13,25 @@ Because Henry James's *The Portrait of a Lady* is in the public domain the only 
 
 [**Portrait NYE Text With Preface and Page Numbers Removed**](https://github.com/wintere/portrait-vis/blob/main/raw-portrait-1908-nye-no-preface.txt)
 
+[**Cambridge Edition List of Textual Variants (variations only)](https://github.com/wintere/portrait-vis/blob/main/cambridge-textual-variants.txt)
 
 # Pipeline
+
+## Data Ingestion and Formattting
+
+Usage: 
+```
+python3 changelist_to_csv.py
+```
+This script uses the predictable *before]after* format in the cambridge-textual-variants.txt file and the CHAPTER# amendations I added to generate a table of before/after variations organized by chapter, page, and (original) line. The page numbers are mapped to the Cambridge Edition of the 1882 version of the *The Portrait of Lady*. 
 
 ## Data Cleaning
 
 *Data cleaning is a vortex that can consume infinite time.*
+raw_output.csv became [**cleaned_output.csv**](https://github.com/wintere/portrait-vis/blob/main/cleaned_output.csv) after manual inspection of the original text to replace the [...] notation with changes that precisely matched the contents of the original text. I needed the changes to be computer readable rather than human readable, which is what they were originally intended to be.
+
+I also annotated replacements with words pertaining to art, music, and architecture.
+
 
 ## The Bag of Words Model
 

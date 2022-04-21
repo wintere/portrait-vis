@@ -53,10 +53,10 @@ However, one can observe the addition of a handful of the French words Anesko an
 
 Usage: 
 ```
-python3 bag_of_words_unstandardized.py
+python3 stem_leaf.py
 ```
 
-I was inspired by Richard Brath's Textual Stem and Leaf plots, which tracked associations between adjectives and characters. However, I wasn't interested in analyzing adjective proximity to character (as interesting as that would be if it was easy to do computationally) but instead adjective proximity to replacement adjectives. 
+I was inspired by Richard Brath's [Textual Stem and Leaf plots](https://observablehq.com/@abebrath/word-associations-stem-and-leaf), which tracked associations between adjectives and characters. However, I wasn't interested in analyzing adjective proximity to character (as interesting as that would be if it was easy to do computationally) but instead adjective proximity to replacement adjectives. 
 
 I sketched out what I imagined my ideal visualization would like below.
 ![image](https://user-images.githubusercontent.com/7553742/164342464-4171778c-0e67-484d-ba0f-9be88c0d7d8a.png)
@@ -65,5 +65,9 @@ To generate the input data, I needed word:nearby replacement pairs. Using the tu
 
 The new datastructure allowed me to, for a word *replaced or removed* look at all the non-trivial, non-stopwords that replaced it. The downside of this approach is that grammar and syntax aren't taken into account. Some tuples like "hat -> bonnet" seem quite reasonable, others seemed purely coincidental, like "die" -> "get".
 
-As the number of replaced or substituted words numbered in the hundreds, I couldn't include all of them in the stem and leaf plot. However, I have included all of the output in this repository.
+I have included all of the output in this repository as replaced_word_pairs.csv.
+
+As the number of replaced or substituted words numbered in the hundreds, I couldn't include all of them in the stem and leaf plot. I selected a handful of keys of interest to plot in the textual stem and leaf plot.
+
+Brath's stem and leaf plot for word associations was written in JavaScript, whereas this project is written in Python. I adapted his concept by creating a styled table instead.
 

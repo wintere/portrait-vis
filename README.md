@@ -13,7 +13,7 @@ Because Henry James's *The Portrait of a Lady* is in the public domain the only 
 
 [**Portrait NYE Text With Preface and Page Numbers Removed**](https://github.com/wintere/portrait-vis/blob/main/raw-portrait-1908-nye-no-preface.txt)
 
-[**Cambridge Edition List of Textual Variants (variations only)](https://github.com/wintere/portrait-vis/blob/main/cambridge-textual-variants.txt)
+[**Cambridge Edition List of Textual Variants (variations only)**](https://github.com/wintere/portrait-vis/blob/main/cambridge-textual-variants.txt)
 
 # Pipeline
 
@@ -76,11 +76,20 @@ I sketched out what I imagined my ideal visualization would like below.
 
 To generate the input data, I needed word:nearby replacement pairs. Using the tuples of revision data I'd already cleaned **([cleaned_output.csv](https://github.com/wintere/portrait-vis/blob/main/cleaned_output.csv)** as described above, I created a dictionary of changes keyed by the original word. To avoid bloating the dictionary with stopwords, I used the default stopword list provided by NLTK, then supplemented with additional words to fix the contractions parsed oddly by the tokenizer.
 
+Because I saw instances of singulars mapped to plurals in my first runs, I used the NLTK lemmatizer to depluralize and deconjugate words systematically. I feel this step and removing stop-words greatly improved the saliency of results.
+
 The new datastructure allowed me to, for a word *replaced or removed* look at all the non-trivial, non-stopwords that replaced it. The downside of this approach is that grammar and syntax aren't taken into account. Some tuples like "hat -> bonnet" seem quite reasonable, others seemed purely coincidental, like "die" -> "get".
 
-I have included all of the output in this repository as replaced_word_pairs.csv.
+I have included all of the output in this repository.
+
+[words_to_revisions.csv](https://github.com/wintere/portrait-vis/blob/main/words_to_revisions.csv) maps each replaced word in the original to all possible words associated with its replacement.
+
+[words_to_revisions_freq.csv](https://github.com/wintere/portrait-vis/blob/main/words_to_revisions_freq.csv) maps each replaced word, replacement word pair, to a relative frequency in the text.
 
 As the number of replaced or substituted words numbered in the hundreds, I couldn't include all of them in the stem and leaf plot. I selected a handful of keys of interest to plot in the textual stem and leaf plot.
 
-Brath's stem and leaf plot for word associations was written in JavaScript, whereas this project is written in Python. I adapted his concept by creating a styled table instead.
+Brath's stem and leaf plot for word associations was written in JavaScript, whereas this project is written in Python. I adapted his concept by creating a styled table using Excel and Photoshop instead.
+
+
+
 

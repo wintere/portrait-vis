@@ -61,5 +61,9 @@ I was inspired by Richard Brath's Textual Stem and Leaf plots, which tracked ass
 I sketched out what I imagined my ideal visualization would like below.
 ![image](https://user-images.githubusercontent.com/7553742/164342464-4171778c-0e67-484d-ba0f-9be88c0d7d8a.png)
 
-To generate the input data, I needed word:nearby replacement pairs. Using the data I'd already cleane
+To generate the input data, I needed word:nearby replacement pairs. Using the tuples of revision data I'd already cleaned **([cleaned_output.csv](https://github.com/wintere/portrait-vis/blob/main/cleaned_output.csv)** as described above, I created a dictionary of changes keyed by the original word. To avoid bloating the dictionary with stopwords, I used the default stopword list provided by NLTK, then supplemented with additional words to fix the contractions parsed oddly by the tokenizer.
+
+The new datastructure allowed me to, for a word *replaced or removed* look at all the non-trivial, non-stopwords that replaced it. The downside of this approach is that grammar and syntax aren't taken into account. Some tuples like "hat -> bonnet" seem quite reasonable, others seemed purely coincidental, like "die" -> "get".
+
+As the number of replaced or substituted words numbered in the hundreds, I couldn't include all of them in the stem and leaf plot. However, I have included all of the output in this repository.
 

@@ -61,6 +61,12 @@ This approach has some obvious problems. It doesn't show which words were replac
 
 However, one can observe the addition of a handful of the French words Anesko and Horne dreaded, as well as the alteration of character ages.
 
+The resulting files are as follows:
+
+[words_added_to_nye.txt](https://github.com/wintere/portrait-vis/blob/main/words_added_to_nye.txt)
+
+[words_removed_from_ct.txt](https://github.com/wintere/portrait-vis/blob/main/words_removed_from_ct.txt)
+
 ## Attempt #2: processing changes on the word level, contextualized *within* a change
 
 
@@ -89,7 +95,3 @@ I have included all of the output in this repository.
 As the number of replaced or substituted words numbered in the hundreds, I couldn't include all of them in the stem and leaf plot. I selected a handful of keys of interest to plot in the textual stem and leaf plot.
 
 Brath's stem and leaf plot for word associations was written in JavaScript, whereas this project is written in Python. I adapted his concept by creating a styled table using Excel and Photoshop instead.
-
-
-
-
